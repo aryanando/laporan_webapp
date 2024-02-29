@@ -23,6 +23,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     
     // Update the last activity timestamp
     $_SESSION["last_activity"] = time();
+    $user = $_SESSION["user_data"];
     
 ?>
 
