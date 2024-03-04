@@ -7,8 +7,14 @@
     $db_username    = "simsvbaru";
     $db_password    = "testing123";
     $db_name        = "simsvbaru";
+    $kuesioner_url  = "localhost:8000";
     define('USERHYBRIDWEB', 'yanghack');
     define('PASHYBRIDWEB', 'sialselamanya');
+
+    function getKuesionerURL() {
+        global $kuesioner_url;
+        return $kuesioner_url;
+    }
 
     function host(){
         global $db_hostname;

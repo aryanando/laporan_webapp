@@ -153,7 +153,7 @@ $user = $_SESSION["user_data"];
                   <th>Kode Kamar</th>
                   <th>Alamat Pasien</th>
                   <th>Penanggung Jawab</th>
-                  <?=$user['role']=='gizi'?'<th>Action</th>':''  ?>
+                  <?= $user['role'] == 'gizi' ? '<th>Action</th>' : ''  ?>
                 </tr>
               </thead>
 
@@ -190,14 +190,16 @@ $user = $_SESSION["user_data"];
                   <td><?= $dataPasien['nama'] ?></td>
                   <td><?= $dataPasien['bgsl'] ?></td>
                   <td><?= $dataPasien['kdbgs'] ?></td>
-                  <td><?= $dataPasien['alamat'].', '.$dataPasien['kel'].', '.$dataPasien['kec'].', '.$dataPasien['kab'].', '.$dataPasien['prov'] ?></td>
+                  <td><?= $dataPasien['alamat'] . ', ' . $dataPasien['kel'] . ', ' . $dataPasien['kec'] . ', ' . $dataPasien['kab'] . ', ' . $dataPasien['prov'] ?></td>
                   <td><?= $dataPasien['pj'] ?></td>
-                  <?=$user['role']=='gizi'?'<td><a href="https://dev.batubhayangkara.com/kuesioner/kepuasan-pasien-gizi/'.str_replace("/","",$dataPasien['no_rawat']).'" type="button" class="btn btn-primary">Review Makanan</a><td>':''  ?>
+                  <?= $user['role'] == 'gizi' ? '<td><a href="' . getKuesionerURL() . '/kuesioner/kepuasan-pasien-gizi/' . str_replace("/", "", $dataPasien['no_rawat']) . '?nama=' . $dataPasien['nama'] . '&bgsl=' . $dataPasien['bgsl'] . '" type="button" class="btn btn-primary">Review Makanan</a><td>' : ''  ?>
 
                 </tr>
               <?php
                 $no++;
               }
+
+
               // var_dump($hasil);
               // die;
 
@@ -240,6 +242,13 @@ $user = $_SESSION["user_data"];
 
 
             </table>
+            <?php
+            if ($user['role'] == 'gizi') {
+            ?>
+            <button type="button" class="btn btn-secondary" onclick="window.location='https://dev.batubhayangkara.com/kuesioner/data-kepuasan-pasien-gizi/KBLrQhzbcwvgHvEXXFA6QSy37GfViwMYr5qxzdQs25AtpR0UDGYqWlMXpwc7k02i'">Lihat Data</button>
+            <?php
+            }
+            ?>
           </div>
         </div>
       </div>
