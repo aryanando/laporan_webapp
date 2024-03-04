@@ -146,7 +146,7 @@ $user = $_SESSION["user_data"];
             <?php
             if ($user['role'] == 'gizi') {
             ?>
-              <button type="button" class="btn btn-secondary" onclick="window.location='https://dev.batubhayangkara.com/kuesioner/data-kepuasan-pasien-gizi/KBLrQhzbcwvgHvEXXFA6QSy37GfViwMYr5qxzdQs25AtpR0UDGYqWlMXpwc7k02i'">Lihat Data Kuesioner Gizi</button>
+              <button type="button" class="btn btn-secondary" onclick="window.location='<?=getKuesionerURL()?>kuesioner/data-kepuasan-pasien-gizi/KBLrQhzbcwvgHvEXXFA6QSy37GfViwMYr5qxzdQs25AtpR0UDGYqWlMXpwc7k02i'">Lihat Data Kuesioner Gizi</button>
             <?php
             }
             ?>
@@ -199,7 +199,7 @@ $user = $_SESSION["user_data"];
                   <td><?= $dataPasien['kdbgs'] ?></td>
                   <td><?= $dataPasien['alamat'] . ', ' . $dataPasien['kel'] . ', ' . $dataPasien['kec'] . ', ' . $dataPasien['kab'] . ', ' . $dataPasien['prov'] ?></td>
                   <td><?= $dataPasien['pj'] ?></td>
-                  <?= $user['role'] == 'gizi' ? '<td><a href="' . getKuesionerURL() . '/kuesioner/kepuasan-pasien-gizi/' . str_replace("/", "", $dataPasien['no_rawat']) . '?nama=' . $dataPasien['nama'] . '&bgsl=' . $dataPasien['bgsl'] . '" type="button" class="btn btn-primary">Review Makanan</a><td>' : ''  ?>
+                  <?= $user['role'] == 'gizi' ? '<td><a href="' . getKuesionerURL() . 'kuesioner/kepuasan-pasien-gizi/' . str_replace("/", "", $dataPasien['no_rawat']) . '?nama=' . $dataPasien['nama'] . '&bgsl=' . $dataPasien['bgsl'] . '" type="button" class="btn btn-primary">Review Makanan</a><td>' : ''  ?>
 
                 </tr>
               <?php
@@ -252,7 +252,7 @@ $user = $_SESSION["user_data"];
             <?php
             if ($user['role'] == 'gizi') {
             ?>
-              <button type="button" class="btn btn-secondary" onclick="window.location='https://dev.batubhayangkara.com/kuesioner/data-kepuasan-pasien-gizi/KBLrQhzbcwvgHvEXXFA6QSy37GfViwMYr5qxzdQs25AtpR0UDGYqWlMXpwc7k02i'">Lihat Data Kuesioner Gizi</button>
+              <button type="button" class="btn btn-secondary" onclick="window.location='<?=getKuesionerURL()?>kuesioner/data-kepuasan-pasien-gizi/KBLrQhzbcwvgHvEXXFA6QSy37GfViwMYr5qxzdQs25AtpR0UDGYqWlMXpwc7k02i'">Lihat Data Kuesioner Gizi</button>
             <?php
             }
             ?>
