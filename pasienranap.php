@@ -143,6 +143,13 @@ $user = $_SESSION["user_data"];
             <h3 class="card-title">Data Pasien Hari ini</h3>
           </div>
           <div class="card-body">
+            <?php
+            if ($user['role'] == 'gizi') {
+            ?>
+              <button type="button" class="btn btn-secondary" onclick="window.location='https://dev.batubhayangkara.com/kuesioner/data-kepuasan-pasien-gizi/KBLrQhzbcwvgHvEXXFA6QSy37GfViwMYr5qxzdQs25AtpR0UDGYqWlMXpwc7k02i'">Lihat Data Kuesioner Gizi</button>
+            <?php
+            }
+            ?>
             <table id="example1" class="table table-bordered table-striped">
               <thead>
                 <tr>
@@ -245,7 +252,7 @@ $user = $_SESSION["user_data"];
             <?php
             if ($user['role'] == 'gizi') {
             ?>
-            <button type="button" class="btn btn-secondary" onclick="window.location='https://dev.batubhayangkara.com/kuesioner/data-kepuasan-pasien-gizi/KBLrQhzbcwvgHvEXXFA6QSy37GfViwMYr5qxzdQs25AtpR0UDGYqWlMXpwc7k02i'">Lihat Data</button>
+              <button type="button" class="btn btn-secondary" onclick="window.location='https://dev.batubhayangkara.com/kuesioner/data-kepuasan-pasien-gizi/KBLrQhzbcwvgHvEXXFA6QSy37GfViwMYr5qxzdQs25AtpR0UDGYqWlMXpwc7k02i'">Lihat Data Kuesioner Gizi</button>
             <?php
             }
             ?>
