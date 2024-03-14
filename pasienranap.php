@@ -199,7 +199,7 @@ $user = $_SESSION["user_data"];
                   <td><?= $dataPasien['kdbgs'] ?></td>
                   <td><?= $dataPasien['alamat'] . ', ' . $dataPasien['kel'] . ', ' . $dataPasien['kec'] . ', ' . $dataPasien['kab'] . ', ' . $dataPasien['prov'] ?></td>
                   <td><?= $dataPasien['pj'] ?></td>
-                  <?= $user['role'] == 'gizi' ? '<td><a href="' . getKuesionerURL() . 'kuesioner/kepuasan-pasien-gizi/' . str_replace("/", "", $dataPasien['no_rawat']) . '?nama=' . $dataPasien['nama'] . '&bgsl=' . $dataPasien['bgsl'] . '" type="button" class="btn btn-primary">Review Makanan</a><td>' : ''  ?>
+                  <?= $user['role'] == 'gizi' ? '<td><a href="' . getKuesionerURL() . 'kuesioner/kepuasan-pasien-gizi/' . str_replace("/", "", $dataPasien['no_rawat']) . '?nama=' . $dataPasien['nama'] . '&bgsl=' . $dataPasien['bgsl'] . '" type="button" class="btn btn-primary">Review Makanan</a></td>' : ''  ?>
 
                 </tr>
               <?php
